@@ -4,10 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "type": "git",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "url": "git+https://github.com/Tribalash/pet-adoption-react.git"
   },
   "keywords": [],
@@ -18,6 +23,14 @@
   },
   "homepage": "https://github.com/Tribalash/pet-adoption-react#readme",
   "devDependencies": {
-    "prettier": "^2.8.1"
+    "@vitejs/plugin-react": "^3.0.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.8.1",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
