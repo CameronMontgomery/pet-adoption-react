@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
     "type": "git",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "url": "git+https://github.com/Tribalash/pet-adoption-react.git"
   },
   "keywords": [],
