@@ -12,7 +12,8 @@ const Details = () => {
   const { id } = useParams();
   const results = useQuery(['details', id], fetchPet);
   const navigate = useNavigate();
-  const [, setAdoptedPet] = useContext(AdoptedPetContext);
+  // eslint-disable-next-line no-unused-vars
+  const [_, setAdoptedPet] = useContext(AdoptedPetContext);
 
   if (results.isError) {
     return (
