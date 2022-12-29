@@ -40,7 +40,12 @@ const SearchParams = () => {
         ) : null}
         <label htmlFor='location'>
           Location
-          <input name='' id='location' type='text' placeholder='location' />
+          <input
+            name='location'
+            id='location'
+            type='text'
+            placeholder='location'
+          />
         </label>
         <label htmlFor='animal'>
           Animal
