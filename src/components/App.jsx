@@ -20,8 +20,11 @@ const App = () => {
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <AdoptedPetContext.Provider value={adoptedPet}>
-          <header className='mb-10 w-full border-r-2 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
-            <Link className='text-6xl text-white hover:text-gray-200' to='/'>
+          <header className='mx-auto mb-10 mt-5 flex w-11/12 justify-center rounded-lg border-r-2 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
+            <Link
+              className='font-sans text-6xl text-white subpixel-antialiased hover:text-gray-200'
+              to='/'
+            >
               Adopt Me!
             </Link>
           </header>
