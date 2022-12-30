@@ -52,10 +52,11 @@ const Details = () => {
       </div>
       {showModal ? (
         <Modal>
-          <div>
+          <div className='max-w-lg rounded-xl bg-white p-8 text-center'>
             <h1>Would you like to adopt {pet.name}?</h1>
-            <div className='buttons'>
+            <div className='mt-4'>
               <button
+                className='mr-3 rounded border-none bg-blue-500 px-6 py-2 text-white hover:bg-blue-600'
                 onClick={() => {
                   setAdoptedPet(pet);
                   navigate('/');
@@ -63,7 +64,12 @@ const Details = () => {
               >
                 Yes
               </button>
-              <button onClick={() => setShowModal(false)}>No</button>
+              <button
+                className='rounded border-none bg-blue-500 px-6 py-2 text-white hover:bg-blue-600'
+                onClick={() => setShowModal(false)}
+              >
+                No
+              </button>
             </div>
           </div>
         </Modal>
