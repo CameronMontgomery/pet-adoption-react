@@ -42,7 +42,7 @@ const SearchParams = () => {
         <label htmlFor='location'>
           Location
           <input
-            className='mb-5 mt-1 block w-60 rounded-md'
+            className='search-input'
             name='location'
             id='location'
             type='text'
@@ -52,7 +52,7 @@ const SearchParams = () => {
         <label htmlFor='animal'>
           Animal
           <select
-            className='mb-5 mt-1 block w-60 rounded-md'
+            className='search-input'
             id='animal'
             name='animal'
             onChange={(e) => {
@@ -70,7 +70,7 @@ const SearchParams = () => {
         <label htmlFor='breed'>
           Breed
           <select
-            className='mb-5 mt-1 block w-60 rounded-md disabled:opacity-50'
+            className='search-input  disabled:opacity-50'
             id='breed'
             name='breed'
             disabled={breeds.length === 0}
@@ -83,7 +83,7 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <button className='rounded border-none bg-orange-500 px-6 py-2 text-white hover:opacity-50'>
+        <button className='rounded border-none bg-orange-500 px-6 py-2 text-white hover:bg-orange-600'>
           Submit
         </button>
       </form>

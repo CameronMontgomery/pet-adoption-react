@@ -17,26 +17,35 @@ const queryClient = new QueryClient({
 const App = () => {
   const adoptedPet = useState(null);
   return (
-    <BrowserRouter>
-      <QueryClientProvider client={queryClient}>
-        <AdoptedPetContext.Provider value={adoptedPet}>
-          <header className='mx-auto mb-10 mt-5 flex w-11/12 justify-center rounded-lg border-r-2 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
-            <Link
-              className='font-sans text-6xl text-white subpixel-antialiased hover:text-gray-200'
-              to='/'
-            >
-              Adopt Me!
-            </Link>
-          </header>
-          <div>
-            <Routes>
-              <Route path='/details/:id' element={<Details />} />
-              <Route path='/' element={<SearchParams />} />
-            </Routes>
-          </div>
-        </AdoptedPetContext.Provider>
-      </QueryClientProvider>
-    </BrowserRouter>
+    <div
+      className='top-0 m-0 pt-2'
+      style={{
+        background: 'url(http://pets-images.dev-apis.com/pets/wallpaperB.jpg)',
+      }}
+    >
+      <div className=' mx-auto max-w-screen-xl'>
+        <BrowserRouter>
+          <QueryClientProvider client={queryClient}>
+            <AdoptedPetContext.Provider value={adoptedPet}>
+              <header className='mx-auto mb-10 flex w-11/12 justify-center rounded-lg border-r-2 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
+                <Link
+                  className='text-5xl text-white subpixel-antialiased hover:text-gray-200'
+                  to='/'
+                >
+                  Adopt Me!
+                </Link>
+              </header>
+              <div>
+                <Routes>
+                  <Route path='/details/:id' element={<Details />} />
+                  <Route path='/' element={<SearchParams />} />
+                </Routes>
+              </div>
+            </AdoptedPetContext.Provider>
+          </QueryClientProvider>
+        </BrowserRouter>
+      </div>
+    </div>
   );
 };
 

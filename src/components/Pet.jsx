@@ -7,11 +7,11 @@ const Pet = ({ name, animal, breed, location, images, id }) => {
   }
 
   return (
-    <Link to={`/details/${id}`} className='pet'>
-      <div className='image-container'>
-        <img src={hero} alt={name} />
+    <Link to={`/details/${id}`} className='relative flex flex-col self-center'>
+      <div className='max-w-md'>
+        <img src={hero} alt={name} className='rounded-md' />
       </div>
-      <div className='info'>
+      <div className='absolute bottom-0 left-0 rounded-md bg-gradient-to-tr from-white to-transparent pr-2 pt-2'>
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>
