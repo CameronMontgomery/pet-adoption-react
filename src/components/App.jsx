@@ -18,7 +18,7 @@ const App = () => {
   const adoptedPet = useState(null);
   return (
     <div
-      className='top-0 m-0 pt-2'
+      className='top-0 m-0 min-h-screen overflow-x-scroll pt-2'
       style={{
         background: 'url(http://pets-images.dev-apis.com/pets/wallpaperB.jpg)',
       }}
@@ -27,7 +27,7 @@ const App = () => {
         <BrowserRouter>
           <QueryClientProvider client={queryClient}>
             <AdoptedPetContext.Provider value={adoptedPet}>
-              <header className='mx-auto mb-10 flex w-11/12 justify-center rounded-lg border-r-2 bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
+              <header className='mx-auto mb-5 flex w-11/12 justify-center rounded-lg border-r-2 bg-gradient-to-b from-blue-300 via-blue-500 to-blue-700 p-7 text-center'>
                 <Link
                   className='text-5xl text-white subpixel-antialiased hover:text-gray-200'
                   to='/'

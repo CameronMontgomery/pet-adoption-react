@@ -5,15 +5,30 @@
 @layer base {
   html {
     @apply m-0 p-0;
+    height: 100%;
   }
 
-  body {
+  /* body {
     font-family: 'Comic Sans MS';
+  } */
+
+  h1 {
+    @apply text-lg;
   }
 }
 
 @layer components {
   .search-input {
     @apply mb-5 mt-1 block w-60 rounded-md;
+  }
+
+  .banner-white {
+    @apply bottom-0 left-0 rounded-md bg-gradient-to-tr from-white to-transparent pr-2 pt-2;
+  }
+}
+
+@layer utilities {
+  .active {
+    @apply border-2 border-blue-600 shadow-2xl;
   }
 }

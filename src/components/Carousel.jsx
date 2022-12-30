@@ -21,8 +21,10 @@ class Carousel extends Component {
 
     return (
       <div className='flex'>
-        <img src={images[active]} alt='animal hero' />
-        <div className='flex'>
+        <div className='max-w-lg shrink self-end'>
+          <img className='rounded-2xl' src={images[active]} alt='animal hero' />
+        </div>
+        <div className='ml-4 shrink flex-col self-end overflow-y-scroll'>
           {images.map((photo, index) => (
             // eslint-disable-next-line
             <img
@@ -30,7 +32,9 @@ class Carousel extends Component {
               data-index={index}
               key={photo}
               src={photo}
-              className={index === active ? 'active' : ''}
+              className={`mt-5 max-h-20 cursor-pointer rounded-full ${
+                index === active ? 'active' : ''
+              }`}
               alt='animal thumbnail'
             />
           ))}

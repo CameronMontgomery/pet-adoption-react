@@ -11,7 +11,7 @@ const Pet = ({ name, animal, breed, location, images, id }) => {
       <div className='max-w-md'>
         <img src={hero} alt={name} className='rounded-md' />
       </div>
-      <div className='absolute bottom-0 left-0 rounded-md bg-gradient-to-tr from-white to-transparent pr-2 pt-2'>
+      <div className='banner-white absolute'>
         <h1>{name}</h1>
         <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>

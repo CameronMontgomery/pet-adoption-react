@@ -83,7 +83,7 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <button className='rounded border-none bg-orange-500 px-6 py-2 text-white hover:bg-orange-600'>
+        <button className='rounded border-none bg-blue-500 px-6 py-2 text-white hover:bg-blue-600'>
           Submit
         </button>
       </form>
